@@ -1,4 +1,10 @@
 package chess;
+/*path 
+/mnt/d/University/Year\ 1/Computer\ Science/GitRepos/comp16412-coursework-1_p54507jm
+
+git
+/d/University/Year 1/Computer Science/GitRepos/comp16412-coursework-1_p54507jm
+*/
 
 public class Game {
 	private static boolean gameEnd=false;
@@ -9,6 +15,14 @@ public class Game {
 		b.printBoard();
 		while (!gameEnd){
 			//write the game logic
+			/*System.out.println("------ Whites move -----");
+
+			b.printBoard();
+			System.out.println("------ Blacks move -----");
+			b.printBoard();*/
+			Bishop b1 = new Bishop(PieceColour.BLACK);
+			Bishop.isLegitmove(4,4,3,4);
+			break;
 		}		
 	}
 	

@@ -18,7 +18,7 @@ public class Board {
 	}
 	
 	public void initialisePieces(){
-		
+		// Pawn p1 = new Pawn(PieceColour.BLACK);
 	}
 	
 	public void printBoard(){
