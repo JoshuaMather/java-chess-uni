@@ -28,7 +28,6 @@ public class Bishop {
             squareToAdd.add(checkj);
 
             validSquares.add(squareToAdd);
-
         }
 
         // up right
@@ -42,7 +41,6 @@ public class Bishop {
             squareToAdd.add(checkj);
 
             validSquares.add(squareToAdd);
-
         }
 
         // down left
@@ -56,7 +54,6 @@ public class Bishop {
             squareToAdd.add(checkj);
 
             validSquares.add(squareToAdd);
-
         }
 
         // up left
@@ -70,23 +67,17 @@ public class Bishop {
             squareToAdd.add(checkj);
 
             validSquares.add(squareToAdd);
-
         }
       
-
-        System.out.print(validSquares);
-       /* if(validSquares.contains([i2,j2])){
-            System.out.print("yes");
-            return true;
-        }*/
-
-        int arraySize = validSquares.size()
-        for(int i; i < validSquares.size(); i++){
-            if(validSquares[i][0] == i2 
-            System.out.print("yes");
-            return true;
+        ArrayList<Integer> newCoordinate = new ArrayList<Integer>();
+        newCoordinate.add(i2);
+        newCoordinate.add(j2);
+        for(int i = 0; i < validSquares.size(); i++){
+            boolean equal = newCoordinate.equals(validSquares.get(i));
+            if(equal) {
+                return true;
+            }    
         }
-        System.out.print("no");
         return false;
     }
 }

@@ -72,6 +72,22 @@ public class Queen{
             validSquares.add(squareToAdd);
 
         }
+
+        // need to do vertical moves 
+        
+        System.out.print(validSquares);
+
+        ArrayList<Integer> newCoordinate = new ArrayList<Integer>();
+        newCoordinate.add(i2);
+        newCoordinate.add(j2);
+        for(int i = 0; i < validSquares.size(); i++){
+            boolean equal = newCoordinate.equals(validSquares.get(i));
+            if(equal) {
+                System.out.print("yes");
+                return true;
+            }    
+        }
+        System.out.print("no");
         return false;
     }
 }

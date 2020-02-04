@@ -1,3 +1,8 @@
 pieces could be blocking a move
 take away one from user input
 ensure input is altered correctly
+
+piece move logic
+piece symbols
+game logic
+get and validate inputs

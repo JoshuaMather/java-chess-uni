@@ -21,7 +21,7 @@ public class Game {
 			System.out.println("------ Blacks move -----");
 			b.printBoard();*/
 			Bishop b1 = new Bishop(PieceColour.BLACK);
-			Bishop.isLegitmove(4,4,3,4);
+			Bishop.isLegitmove(4,4,6,7);
 			break;
 		}		
 	}
