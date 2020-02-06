@@ -3,7 +3,7 @@ package chess;
 /mnt/d/University/Year\ 1/Computer\ Science/GitRepos/comp16412-coursework-1_p54507jm
 
 git
-/d/University/Year 1/Computer Science/GitRepos/comp16412-coursework-1_p54507jm
+/d/University/Year\ 1/Computer\ Science/GitRepos/comp16412-coursework-1_p54507jm
 */
 
 public class Game {
@@ -20,8 +20,8 @@ public class Game {
 			b.printBoard();
 			System.out.println("------ Blacks move -----");
 			b.printBoard();*/
-			Bishop b1 = new Bishop(PieceColour.BLACK);
-			Bishop.isLegitmove(4,4,6,7);
+			Knight b1 = new Knight(PieceColour.BLACK);
+			Knight.isLegitmove(4,4,3,4);
 			break;
 		}		
 	}

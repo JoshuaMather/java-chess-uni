@@ -73,21 +73,67 @@ public class Queen{
 
         }
 
-        // need to do vertical moves 
-        
-        System.out.print(validSquares);
+        // up
+        checki = i1;
+        checkj = j1;
+        while (checki>0) {
+            checki -= 1;
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
 
+            validSquares.add(squareToAdd);
+
+        }
+
+        // down
+        checki = i1;
+        checkj = j1;
+        while (checki<7) {
+            checki += 1;
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
+
+            validSquares.add(squareToAdd);
+
+        }
+
+        // left
+        checki = i1;
+        checkj = j1;
+        while (checkj>0) {
+            checkj -= 1;
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
+
+            validSquares.add(squareToAdd);
+
+        }
+
+        // right
+        checki = i1;
+        checkj = j1;
+        while (checkj<7) {
+            checkj += 1;
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
+
+            validSquares.add(squareToAdd);
+
+        }
+        
         ArrayList<Integer> newCoordinate = new ArrayList<Integer>();
         newCoordinate.add(i2);
         newCoordinate.add(j2);
         for(int i = 0; i < validSquares.size(); i++){
             boolean equal = newCoordinate.equals(validSquares.get(i));
             if(equal) {
-                System.out.print("yes");
                 return true;
             }    
         }
-        System.out.print("no");
         return false;
     }
 }
