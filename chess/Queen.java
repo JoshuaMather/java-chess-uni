@@ -6,7 +6,7 @@ black U+265B
  */
 
 public class Queen{
-    Queen(PieceColour colourofPiece){
+    Queen(PieceColour colourOfPiece){
 
     }
 

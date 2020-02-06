@@ -6,7 +6,7 @@ black U+265E
  */
 
 public class Knight {
-    Knight(PieceColour colourofPiece){
+    Knight(PieceColour colourOfPiece){
 
     }
 

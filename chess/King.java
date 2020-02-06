@@ -6,7 +6,7 @@ black U+265A
  */
 
 public class King{
-    King(PieceColour colourofPiece){
+    King(PieceColour colourOfPiece){
 
     }
 

@@ -6,7 +6,7 @@ black U+265D
  */
 
 public class Bishop {
-    Bishop(PieceColour colourofPiece){
+    Bishop(PieceColour colourOfPiece){
 
     }
 

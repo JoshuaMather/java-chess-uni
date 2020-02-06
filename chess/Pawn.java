@@ -4,9 +4,12 @@ white U+2659
 black U+265F
 */
 
-public class Pawn{	
-    Pawn(PieceColour colourofPiece){
-
+public class Pawn extends Piece{	
+    Pawn(PieceColour colourOfPiece){
+        if(colourOfPiece == PieceColour.BLACK){
+            Pawn.colour = PieceColour.BLACK;
+           // Pawn.symbol = "U+265F";
+        }
     }
 
     public static boolean isLegitmove(int i1, int j1, int i2, int j2){

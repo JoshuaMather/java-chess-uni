@@ -5,4 +5,7 @@ ensure input is altered correctly
 piece move logic
 piece symbols
 game logic
-get and validate inputs
+get inputs
+convert inputs to 0-7
+
+to end game see if piece taken is king

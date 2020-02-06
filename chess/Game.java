@@ -20,8 +20,8 @@ public class Game {
 			b.printBoard();
 			System.out.println("------ Blacks move -----");
 			b.printBoard();*/
-			Knight b1 = new Knight(PieceColour.BLACK);
-			Knight.isLegitmove(4,4,3,4);
+			CheckInput.checkCoordinateValidity("6p");
+			
 			break;
 		}		
 	}

@@ -1,14 +1,14 @@
 package chess;
 
 public class Piece {
-    private int row, column;
-    private String symbol;
-    protected PieceColour colour;
+    private static int row, column;
+    private static String symbol;
+    protected static PieceColour colour;
 
     Piece(){}
 
     public static String getSymbol(){
-        return null;
+        return symbol;
     }
 
     public void setSymbol(String givenSymbol){
@@ -16,10 +16,12 @@ public class Piece {
     }
 
     public static PieceColour getColour(){
-        return null;
+        return colour;
     }
 
     public static void updateCoordinates(int a, int b){
+        row = a;
+        column = b;
 
     }
 

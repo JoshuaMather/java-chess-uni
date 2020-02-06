@@ -5,7 +5,7 @@ black U+265C
  */
 
 public class Rook{
-    Rook(PieceColour colourofPiece){
+    Rook(PieceColour colourOfPiece){
 
     }
 

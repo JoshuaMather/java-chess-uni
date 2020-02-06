@@ -6,6 +6,7 @@ public class Square {
 	private int i;
 	private int j;
 	private boolean hasPiece;
+	private Piece p;
 	
 	public Square(int iIn, int jIn){
 		i=iIn;
@@ -15,6 +16,26 @@ public class Square {
 	
 	public boolean hasPiece(){
 		return hasPiece;
+	}
+
+	public Piece getPiece(){
+		return p;
+	}
+
+	public void setPiece(Piece pieceToSet){
+
+	}
+
+	public void removePiece(){
+
+	}
+
+	public int geti(){
+		return i;
+	}
+
+	public int getj(){
+		return j;
 	}
 	
 }
