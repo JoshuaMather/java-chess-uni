@@ -5,12 +5,12 @@ white U+2657
 black U+265D
  */
 
-public class Bishop {
+public class Bishop extends Piece{
     Bishop(PieceColour colourOfPiece){
 
     }
 
-    public static boolean isLegitmove(int i1, int j1, int i2, int j2){
+    public boolean isLegitmove(int i1, int j1, int i2, int j2){
         /*
         create list of diagonals
         see if second coordinate is in list

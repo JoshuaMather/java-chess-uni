@@ -14,12 +14,10 @@ public class CheckInput {
 
 
 		if(input.length() != 2){
-			System.out.print("not lengh 2");
 			return false;
 		}
 		Character number = input.charAt(0);
 		Character letter = input.charAt(1);
-		System.out.print(number + " "+ letter);
 
 		ArrayList<Character> validNumber = new ArrayList<Character>();
 		validNumber.add('1');
@@ -41,17 +39,20 @@ public class CheckInput {
 		validLetter.add('g');
 		validLetter.add('h');
 
+
+		boolean equalNumber;
+		boolean equalLetter;
 		for(int i = 0; i < validNumber.size(); i++){
-			boolean equalNumber = number.equals(validNumber.get(i));
+			equalNumber = number.equals(validNumber.get(i));
             if(equalNumber) {
                 for(int j = 0; j < validLetter.size(); j++){
-					boolean equalLetter = letter.equals(validLetter.get(j));
+					equalLetter = letter.equals(validLetter.get(j));
 					if(equalLetter) {
 						return true;
 					}
 				}    
             }    
-        }
+		}
 		return false;
 	}
 }

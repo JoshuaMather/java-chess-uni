@@ -10,7 +10,7 @@ public class King{
 
     }
 
-    public static boolean isLegitmove(int i1, int j1, int i2, int j2){
+    public boolean isLegitmove(int i1, int j1, int i2, int j2){
         // create list of possible moves and see if new coordinate is one of these moves
 
         ArrayList<ArrayList<Integer>> validSquares = new ArrayList<ArrayList<Integer>>();

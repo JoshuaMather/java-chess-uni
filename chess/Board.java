@@ -20,44 +20,72 @@ public class Board {
 	public void initialisePieces(){
 		// black
 		Pawn bp1 = new Pawn(PieceColour.BLACK);
+		bp1.setSymbol("U+265F");
 		Pawn bp2 = new Pawn(PieceColour.BLACK);
+		bp2.setSymbol("U+265F");
 		Pawn bp3 = new Pawn(PieceColour.BLACK);
+		bp3.setSymbol("U+265F");
 		Pawn bp4 = new Pawn(PieceColour.BLACK);
+		bp4.setSymbol("U+265F");
 		Pawn bp5 = new Pawn(PieceColour.BLACK);
+		bp5.setSymbol("U+265F");
 		Pawn bp6 = new Pawn(PieceColour.BLACK);
+		bp6.setSymbol("U+265F");
 		Pawn bp7 = new Pawn(PieceColour.BLACK);
+		bp7.setSymbol("U+265F");
 		Pawn bp8 = new Pawn(PieceColour.BLACK);
+		bp8.setSymbol("U+265F");
 
 		Rook br1 = new Rook(PieceColour.BLACK);
+		br1.setSymbol("U+265C");
 		Rook br2 = new Rook(PieceColour.BLACK);
+		br2.setSymbol("U+265C");
 
 		Knight bk1 = new Knight(PieceColour.BLACK);
+		bk1.setSymbol("U+265E");
 		Knight bk2 = new Knight(PieceColour.BLACK);
+		bk2.setSymbol("U+265E");
 
 		Bishop bb1 = new Bishop(PieceColour.BLACK);
+		bb1.setSymbol("U+265D");
 		Bishop bb2 = new Bishop(PieceColour.BLACK);
+		bb2.setSymbol("U+265D");
 
 		Queen bq1 = new Queen(PieceColour.BLACK);
 		King bki1 = new King(PieceColour.BLACK);
 
 		// white
 		Pawn wp1 = new Pawn(PieceColour.WHITE);
+		wp1.setSymbol("U+2659");
 		Pawn wp2 = new Pawn(PieceColour.WHITE);
+		wp2.setSymbol("U+2659");
 		Pawn wp3 = new Pawn(PieceColour.WHITE);
+		wp3.setSymbol("U+2659");
 		Pawn wp4 = new Pawn(PieceColour.WHITE);
+		wp4.setSymbol("U+2659");
 		Pawn wp5 = new Pawn(PieceColour.WHITE);
+		wp5.setSymbol("U+2659");
 		Pawn wp6 = new Pawn(PieceColour.WHITE);
+		wp6.setSymbol("U+2659");
 		Pawn wp7 = new Pawn(PieceColour.WHITE);
+		wp7.setSymbol("U+2659");
 		Pawn wp8 = new Pawn(PieceColour.WHITE);
+		wp8.setSymbol("U+2659");
 
 		Rook wr1 = new Rook(PieceColour.WHITE);
+		wr1.setSymbol("U+2656");
 		Rook wr2 = new Rook(PieceColour.WHITE);
+		wr2.setSymbol("U+2656");
 
 		Knight wk1 = new Knight(PieceColour.WHITE);
+		wk1.setSymbol("U+2658");
 		Knight wk2 = new Knight(PieceColour.WHITE);
+		wk2.setSymbol("U+2658");
 
 		Bishop wb1 = new Bishop(PieceColour.WHITE);
+		wb1.setSymbol("U+2657");
 		Bishop wb2 = new Bishop(PieceColour.WHITE);
+		wb2.setSymbol("U+2657");
 
 		Queen wq1 = new Queen(PieceColour.WHITE);
 		King wki1 = new King(PieceColour.WHITE);
@@ -89,6 +117,10 @@ public class Board {
 	
 	
 	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p){
+		board[i0][j0].removePiece();
+		
+
+		p.updateCoordinates(i1, j1);
 		return false;
 	}
 

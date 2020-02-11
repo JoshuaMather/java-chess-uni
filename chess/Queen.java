@@ -10,7 +10,7 @@ public class Queen{
 
     }
 
-    public static boolean isLegitmove(int i1, int j1, int i2, int j2){
+    public boolean isLegitmove(int i1, int j1, int i2, int j2){
          /*
         create list of possible moves
         see if second coordinate is in list

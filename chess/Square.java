@@ -5,7 +5,7 @@ package chess;
 public class Square {
 	private int i;
 	private int j;
-	private boolean hasPiece;
+	private boolean hasPiece = false;
 	private Piece p;
 	
 	public Square(int iIn, int jIn){
@@ -23,11 +23,13 @@ public class Square {
 	}
 
 	public void setPiece(Piece pieceToSet){
-
+		p = pieceToSet;
+		hasPiece = !hasPiece;
 	}
 
 	public void removePiece(){
-
+		hasPiece = !hasPiece;
+		p = null;
 	}
 
 	public int geti(){

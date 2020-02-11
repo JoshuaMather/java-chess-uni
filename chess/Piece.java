@@ -7,25 +7,25 @@ public class Piece {
 
     Piece(){}
 
-    public static String getSymbol(){
+    public String getSymbol(){
         return symbol;
     }
 
     public void setSymbol(String givenSymbol){
-  
+        symbol = givenSymbol;
     }
 
-    public static PieceColour getColour(){
+    public PieceColour getColour(){
         return colour;
     }
 
-    public static void updateCoordinates(int a, int b){
+    public void updateCoordinates(int a, int b){
         row = a;
         column = b;
 
     }
 
-    public static boolean isLegitmove(int i1, int j1, int i2, int j2){
+    public boolean isLegitmove(int i1, int j1, int i2, int j2){
         return true;
     }
 }
