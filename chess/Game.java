@@ -35,41 +35,51 @@ public class Game {
 
 			boolean validOrigin = false;
 			Character i1C = '\u0000';
-			Character j1 = '\u0000';
+			Character j1C = '\u0000';
 			int i1 = 0;
+			int j1 = 0;
 			if(CheckInput.checkCoordinateValidity(inputO)){
 				i1C = inputO.charAt(0);
-				j1 = inputO.charAt(1);
+				j1C = inputO.charAt(1);
 
 				i1 = i1C - '0';
 				i1 = i1 - 1;
 
-				switch(j1){
+				switch(j1C){
 					case 'a':
-						j1 = 0;
+						j1C = '0';
+						j1 = j1C - '0';
 						break;
 					case 'b':
-						j1 = 1;
+						j1C = '1';
+						j1 = j1C - '0';
 						break;
 					case 'c':
-						j1 = 2;
+						j1C = '2';
+						j1 = j1C - '0';
 						break;
 					case 'd':
-						j1 = 3;
+						j1C = '3';
+						j1 = j1C - '0';
 						break;
 					case 'e':
-						j1 = 4;
+						j1C = '4';
+						j1 = j1C - '0';
 						break;
 					case 'f':
-						j1 = 5;
+						j1C = '5';
+						j1 = j1C - '0';
 						break;
 					case 'g':
-						j1 = 6;
+						j1C = '6';
+						j1 = j1C - '0';
 						break;
 					case 'h':
-						j1 = 7;
+						j1C = '7';
+						j1 = j1C - '0';
 						break;
 				}
+
 
 				validOrigin = true;
 			}
@@ -81,39 +91,48 @@ public class Game {
 
 			boolean validDestination = false;
 			Character i2C = '\u0000';
-			Character j2 = '\u0000';
+			Character j2C = '\u0000';
 			int i2 = 0;
+			int j2 = 0;
 			if(CheckInput.checkCoordinateValidity(inputD)){
 				i2C = inputO.charAt(0);
-				j2 = inputO.charAt(1);
+				j2C = inputO.charAt(1);
 
 				i2 = i2C - '0';
 				i2 = i2 - 1;
 
-				switch(j2){
+				switch(j2C){
 					case 'a':
-						j2 = 0;
+						j2C = '0';
+						j2 = j2C - '0';
 						break;
 					case 'b':
-						j2 = 1;
+						j2C = '1';
+						j2 = j2C - '0';
 						break;
 					case 'c':
-						j2 = 2;
+						j2C = '2';
+						j2 = j2C - '0';
 						break;
 					case 'd':
-						j2 = 3;
+						j2C = '3';
+						j2 = j2C - '0';
 						break;
 					case 'e':
-						j2 = 4;
+						j2C = '4';
+						j2 = j2C - '0';
 						break;
 					case 'f':
-						j2 = 5;
+						j2C = '5';
+						j2 = j2C - '0';
 						break;
 					case 'g':
-						j2 = 6;
+						j2C = '6';
+						j2 = j2C - '0';
 						break;
 					case 'h':
-						j2 = 7;
+						j2C = '7';
+						j2 = j2C - '0';
 						break;
 				}
 
@@ -124,7 +143,7 @@ public class Game {
 			if(validOrigin && validDestination){
 				if(b.hasPiece(i1, j1)){
 					Piece pieceToMove = b.getPiece(i1, j1);
-					b.movePiece(i1, j1, i2, j2, pieceToMove);
+					System.out.println(pieceToMove);
 					if(b.movePiece(i1, j1, i2, j2, pieceToMove)){
 						gameEnd = !gameEnd;
 						if(whiteMove){
@@ -148,6 +167,7 @@ public class Game {
 			}
 
 			b.printBoard();
+			System.out.println("");
 			whiteMove = !whiteMove;
 		}		
 	}

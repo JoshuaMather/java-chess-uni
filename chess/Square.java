@@ -28,7 +28,8 @@ public class Square {
 	}
 
 	public void removePiece(){
-		hasPiece = !hasPiece;
+		hasPiece = false;
+		System.out.println(hasPiece);
 		p = null;
 	}
 

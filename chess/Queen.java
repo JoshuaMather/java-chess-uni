@@ -5,7 +5,7 @@ white U+2655
 black U+265B	
  */
 
-public class Queen{
+public class Queen extends Piece{
     Queen(PieceColour colourOfPiece){
 
     }
