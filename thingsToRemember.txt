@@ -10,6 +10,7 @@ convert inputs to 0-7
 
 to end game see if piece taken is king
 
-make sure white only move white pieces and vice versa
-moving pieces
-when move pieces not keeping moved state
+not take own colour piece
+jumping over other pieces
+
+pawn takes diagonally

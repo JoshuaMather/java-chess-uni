@@ -1,9 +1,9 @@
 package chess;
 
 public class Piece {
-    private static int row, column;
-    private static String symbol;
-    protected static PieceColour colour;
+    private  int row, column;
+    private  String symbol;
+    protected  PieceColour colour;
 
     Piece(){}
 
@@ -12,7 +12,7 @@ public class Piece {
     }
 
     public void setSymbol(String givenSymbol){
-        symbol = givenSymbol;
+        this.symbol = givenSymbol;
     }
 
     public PieceColour getColour(){
@@ -20,8 +20,8 @@ public class Piece {
     }
 
     public void updateCoordinates(int a, int b){
-        row = a;
-        column = b;
+        this.row = a;
+        this.column = b;
 
     }
 

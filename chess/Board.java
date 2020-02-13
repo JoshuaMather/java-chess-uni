@@ -153,21 +153,24 @@ public class Board {
 	
 	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p){
 		// return true if king captured
-		System.out.println("abc");
-		if(p.isLegitmove(i0, j0, i1, j1)){
-			System.out.println("valid");
+		
 			board[i0][j0].removePiece();
+			System.out.println(i0);
+			System.out.println(j0);
+			System.out.println(i1);
+			System.out.println(j1);
 			System.out.println(board[i0][j0]);
+			System.out.println(board[i1][j1]);
 
 			if(board[i1][j1].getPiece() instanceof King){
 				board[i1][j1].setPiece(p);
 				return true;
 			}
 			board[i1][j1].setPiece(p);
+			board[i1][j1].hasPiece();
 
 			p.updateCoordinates(i1, j1);
 			System.out.println(board[i1][j1]);
-		}
 		return false;
 	}
 
@@ -180,10 +183,7 @@ public class Board {
 	}
 	
 	public boolean hasPiece(int i, int j){		
-		if(board[i][i].hasPiece()){
-			return true;
-		}
-		return false;
+		return board[i][j].hasPiece();
 	}
 
 }

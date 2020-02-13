@@ -95,8 +95,8 @@ public class Game {
 			int i2 = 0;
 			int j2 = 0;
 			if(CheckInput.checkCoordinateValidity(inputD)){
-				i2C = inputO.charAt(0);
-				j2C = inputO.charAt(1);
+				i2C = inputD.charAt(0);
+				j2C = inputD.charAt(1);
 
 				i2 = i2C - '0';
 				i2 = i2 - 1;
@@ -143,16 +143,27 @@ public class Game {
 			if(validOrigin && validDestination){
 				if(b.hasPiece(i1, j1)){
 					Piece pieceToMove = b.getPiece(i1, j1);
-					System.out.println(pieceToMove);
-					if(b.movePiece(i1, j1, i2, j2, pieceToMove)){
-						gameEnd = !gameEnd;
-						if(whiteMove){
-							System.out.println("White is the winner!");
+					if((whiteMove && pieceToMove.colour == PieceColour.WHITE) || (!whiteMove && pieceToMove.colour == PieceColour.BLACK)){
+						if(pieceToMove.isLegitmove(i1, j1, i2, j2)){
+						whiteMove = !whiteMove;
+							if(b.movePiece(i1, j1, i2, j2, pieceToMove)){
+								gameEnd = !gameEnd;
+								if(whiteMove){
+									System.out.println("White is the winner!");
+								}
+								else{
+									System.out.println("Black is the winner!");
+								}
+							}
 						}
 						else{
-							System.out.println("Black is the winner!");
+							System.out.println("Invalid move");
 						}
 					}
+					else{
+						System.out.println("Invalid piece to move");
+					}
+
 				}
 				else{
 					System.out.println("No piece on this square\n");
@@ -168,7 +179,6 @@ public class Game {
 
 			b.printBoard();
 			System.out.println("");
-			whiteMove = !whiteMove;
 		}		
 	}
 	

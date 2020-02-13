@@ -7,7 +7,7 @@ black U+265D
 
 public class Bishop extends Piece{
     Bishop(PieceColour colourOfPiece){
-
+        this.colour = colourOfPiece;
     }
 
     public boolean isLegitmove(int i1, int j1, int i2, int j2){

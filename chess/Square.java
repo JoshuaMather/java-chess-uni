@@ -5,32 +5,32 @@ package chess;
 public class Square {
 	private int i;
 	private int j;
-	private boolean hasPiece = false;
+	private boolean hasPiece;
 	private Piece p;
 	
 	public Square(int iIn, int jIn){
-		i=iIn;
-		j=jIn;
+		this.i=iIn;
+		this.j=jIn;
 	}
 	
 	
 	public boolean hasPiece(){
-		return hasPiece;
+		return this.hasPiece;
 	}
 
 	public Piece getPiece(){
-		return p;
+		return this.p;
 	}
 
 	public void setPiece(Piece pieceToSet){
-		p = pieceToSet;
-		hasPiece = !hasPiece;
+		this.p = pieceToSet;
+		System.out.println(p);
+		this.hasPiece = true;
 	}
 
 	public void removePiece(){
-		hasPiece = false;
-		System.out.println(hasPiece);
-		p = null;
+		this.hasPiece = false;
+		this.p = null;
 	}
 
 	public int geti(){
