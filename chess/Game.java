@@ -158,10 +158,12 @@ public class Game {
 						}
 						else{
 							System.out.println("Invalid move");
+							continue;
 						}
 					}
 					else{
 						System.out.println("Invalid piece to move");
+						continue;
 					}
 
 				}

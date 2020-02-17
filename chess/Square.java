@@ -24,7 +24,6 @@ public class Square {
 
 	public void setPiece(Piece pieceToSet){
 		this.p = pieceToSet;
-		System.out.println(p);
 		this.hasPiece = true;
 	}
 

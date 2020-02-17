@@ -17,7 +17,7 @@ public class Knight extends Piece{
         int checki = i1;
         int checkj = j1;
 
-        if (checki-2 > 0 && checkj+1 < 7){
+        if (checki-2 >= 0 && checkj+1 <= 7){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki-2);
             squareToAdd.add(checkj+1);
@@ -25,7 +25,7 @@ public class Knight extends Piece{
             validSquares.add(squareToAdd);
         }
 
-         if (checki-1 > 0 && checkj+2 < 7){
+         if (checki-1 >= 0 && checkj+2 <= 7){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki-1);
             squareToAdd.add(checkj+2);
@@ -33,7 +33,7 @@ public class Knight extends Piece{
             validSquares.add(squareToAdd);
         }
         
-         if (checki+1 < 7 && checkj+2<7){
+         if (checki+1 <= 7 && checkj+2 <= 7){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki+1);
             squareToAdd.add(checkj+2);
@@ -41,7 +41,7 @@ public class Knight extends Piece{
             validSquares.add(squareToAdd);
         }
         
-         if (checki+2 < 7 && checkj+1 < 7){
+         if (checki+2 <= 7 && checkj+1 <= 7){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki+2);
             squareToAdd.add(checkj+1);
@@ -49,7 +49,7 @@ public class Knight extends Piece{
             validSquares.add(squareToAdd);
         }
         
-         if (checki+2 < 7 && checkj-1 > 0){
+         if (checki+2 <= 7 && checkj-1 >= 0){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki+2);
             squareToAdd.add(checkj-1);
@@ -57,7 +57,7 @@ public class Knight extends Piece{
             validSquares.add(squareToAdd);
         }
         
-         if (checki+1 < 7 && checkj-2 > 0){
+         if (checki+1 <= 7 && checkj-2 >= 0){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki+1);
             squareToAdd.add(checkj-2);
@@ -65,7 +65,7 @@ public class Knight extends Piece{
             validSquares.add(squareToAdd);
         }
         
-         if (checki-1 > 0 && checkj-2 > 0){
+         if (checki-1 >= 0 && checkj-2 >= 0){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki-1);
             squareToAdd.add(checkj-2);
@@ -73,7 +73,7 @@ public class Knight extends Piece{
             validSquares.add(squareToAdd);
         }
         
-         if (checki-2 > 0 && checkj-1 > 0){
+         if (checki-2 >= 0 && checkj-1 >= 0){
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki-2);
             squareToAdd.add(checkj-1);

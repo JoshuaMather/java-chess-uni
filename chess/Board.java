@@ -155,12 +155,6 @@ public class Board {
 		// return true if king captured
 		
 			board[i0][j0].removePiece();
-			System.out.println(i0);
-			System.out.println(j0);
-			System.out.println(i1);
-			System.out.println(j1);
-			System.out.println(board[i0][j0]);
-			System.out.println(board[i1][j1]);
 
 			if(board[i1][j1].getPiece() instanceof King){
 				board[i1][j1].setPiece(p);
@@ -170,7 +164,6 @@ public class Board {
 			board[i1][j1].hasPiece();
 
 			p.updateCoordinates(i1, j1);
-			System.out.println(board[i1][j1]);
 		return false;
 	}
 

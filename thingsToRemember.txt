@@ -1,12 +1,7 @@
 pieces could be blocking a move
-take away one from user input
-ensure input is altered correctly
 
 piece move logic
-piece symbols
 game logic
-get inputs
-convert inputs to 0-7
 
 to end game see if piece taken is king
 
@@ -14,3 +9,4 @@ not take own colour piece
 jumping over other pieces
 
 pawn takes diagonally
+pawn logic and rook logic
