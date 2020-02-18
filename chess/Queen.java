@@ -16,13 +16,27 @@ public class Queen extends Piece{
         see if second coordinate is in list
         */
         ArrayList<ArrayList<Integer>> validSquares = new ArrayList<ArrayList<Integer>>();
-    
+        Square[][] b = Board.getBoard();
+
         // down right
         int checki = i1;
         int checkj = j1;
         while (checki<7 && checkj<7) {
             checki += 1;
             checkj += 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+        
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -37,6 +51,19 @@ public class Queen extends Piece{
         while (checki<7 && checkj>0) {
             checki += 1;
             checkj -= 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+        
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -51,6 +78,19 @@ public class Queen extends Piece{
         while (checki>0 && checkj<7) {
             checki -= 1;
             checkj += 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+        
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -65,6 +105,19 @@ public class Queen extends Piece{
         while (checki>0 && checkj>0) {
             checki -= 1;
             checkj -= 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki);
+                squareToAdd.add(checkj);
+
+                validSquares.add(squareToAdd);
+                break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -78,6 +131,19 @@ public class Queen extends Piece{
         checkj = j1;
         while (checki>0) {
             checki -= 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -91,6 +157,19 @@ public class Queen extends Piece{
         checkj = j1;
         while (checki<7) {
             checki += 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -104,6 +183,19 @@ public class Queen extends Piece{
         checkj = j1;
         while (checkj>0) {
             checkj -= 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+        
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -117,6 +209,19 @@ public class Queen extends Piece{
         checkj = j1;
         while (checkj<7) {
             checkj += 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
             squareToAdd.add(checkj);
@@ -124,6 +229,7 @@ public class Queen extends Piece{
             validSquares.add(squareToAdd);
 
         }
+
         
         ArrayList<Integer> newCoordinate = new ArrayList<Integer>();
         newCoordinate.add(i2);

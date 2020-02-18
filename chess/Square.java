@@ -33,11 +33,11 @@ public class Square {
 	}
 
 	public int geti(){
-		return i;
+		return this.i;
 	}
 
 	public int getj(){
-		return j;
+		return this.j;
 	}
 	
 }

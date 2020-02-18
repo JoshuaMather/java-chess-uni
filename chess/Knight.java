@@ -16,69 +16,190 @@ public class Knight extends Piece{
         ArrayList<ArrayList<Integer>> validSquares = new ArrayList<ArrayList<Integer>>();
         int checki = i1;
         int checkj = j1;
+        Square[][] b = Board.getBoard();
 
         if (checki-2 >= 0 && checkj+1 <= 7){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki-2);
-            squareToAdd.add(checkj+1);
-
-            validSquares.add(squareToAdd);
+            if(b[checki-2][checkj+1].hasPiece()){
+                if(b[checki-2][checkj+1].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki-2);
+                    squareToAdd.add(checkj+1);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki-2);
+                squareToAdd.add(checkj+1);
+    
+                validSquares.add(squareToAdd);
+            }
+       
         }
 
          if (checki-1 >= 0 && checkj+2 <= 7){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki-1);
-            squareToAdd.add(checkj+2);
-
-            validSquares.add(squareToAdd);
+            if(b[checki-1][checkj+2].hasPiece()){
+                if(b[checki-1][checkj+1].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki-1);
+                    squareToAdd.add(checkj+2);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki-1);
+                squareToAdd.add(checkj+2);
+    
+                validSquares.add(squareToAdd);
+            }
+            
         }
         
          if (checki+1 <= 7 && checkj+2 <= 7){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki+1);
-            squareToAdd.add(checkj+2);
-
-            validSquares.add(squareToAdd);
+            if(b[checki+1][checkj+2].hasPiece()){
+                if(b[checki+1][checkj+2].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki+1);
+                    squareToAdd.add(checkj+2);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki+1);
+                squareToAdd.add(checkj+2);
+    
+                validSquares.add(squareToAdd);
+            }
+            
         }
         
          if (checki+2 <= 7 && checkj+1 <= 7){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki+2);
-            squareToAdd.add(checkj+1);
-
-            validSquares.add(squareToAdd);
+            if(b[checki+2][checkj+1].hasPiece()){
+                if(b[checki+2][checkj+1].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki+2);
+                    squareToAdd.add(checkj+1);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki+2);
+                squareToAdd.add(checkj+1);
+    
+                validSquares.add(squareToAdd);
+            }
+            
         }
         
          if (checki+2 <= 7 && checkj-1 >= 0){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki+2);
-            squareToAdd.add(checkj-1);
-
-            validSquares.add(squareToAdd);
+            if(b[checki+2][checkj-1].hasPiece()){
+                if(b[checki+2][checkj-1].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki+2);
+                    squareToAdd.add(checkj-1);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki+2);
+                squareToAdd.add(checkj-1);
+    
+                validSquares.add(squareToAdd);
+            }
+            
         }
         
          if (checki+1 <= 7 && checkj-2 >= 0){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki+1);
-            squareToAdd.add(checkj-2);
-
-            validSquares.add(squareToAdd);
+            if(b[checki+1][checkj-2].hasPiece()){
+                if(b[checki+1][checkj-2].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki+1);
+                    squareToAdd.add(checkj-2);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki+1);
+                squareToAdd.add(checkj-2);
+    
+                validSquares.add(squareToAdd);
+            }
+            
         }
         
          if (checki-1 >= 0 && checkj-2 >= 0){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki-1);
-            squareToAdd.add(checkj-2);
-
-            validSquares.add(squareToAdd);
+            if(b[checki-1][checkj-2].hasPiece()){
+                if(b[checki-1][checkj-2].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki-1);
+                    squareToAdd.add(checkj-2);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki-1);
+                squareToAdd.add(checkj-2);
+    
+                validSquares.add(squareToAdd);
+            }
+            
         }
         
          if (checki-2 >= 0 && checkj-1 >= 0){
-            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
-            squareToAdd.add(checki-2);
-            squareToAdd.add(checkj-1);
-
-            validSquares.add(squareToAdd);
+            if(b[checki-2][checkj-1].hasPiece()){
+                if(b[checki-2][checkj-1].getPiece().colour == this.colour){
+                    
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki-2);
+                    squareToAdd.add(checkj-1);
+        
+                    validSquares.add(squareToAdd);
+                }
+            }
+            else{
+                ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                squareToAdd.add(checki-2);
+                squareToAdd.add(checkj-1);
+    
+                validSquares.add(squareToAdd);
+            }
+            
         }
         ArrayList<Integer> newCoordinate = new ArrayList<Integer>();
         newCoordinate.add(i2);

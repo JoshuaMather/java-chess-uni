@@ -1,4 +1,6 @@
 package chess;
+import java.util.ArrayList;
+
 /*
 white U+2656	
 black U+265C	
@@ -10,9 +12,130 @@ public class Rook extends Piece{
     }
 
     public boolean isLegitmove(int i1, int j1, int i2, int j2){
-        // no need to store list of possible moves as rook always will move in same row or column
-        if (i1 == i2 || j1 == j2) {
-            return true;
+          /*
+        create list of possible moves
+        see if second coordinate is in list
+        */
+        ArrayList<ArrayList<Integer>> validSquares = new ArrayList<ArrayList<Integer>>();
+        Square[][] b = Board.getBoard();
+
+        
+        int checki = i1;
+        int checkj = j1;
+
+        // up
+        checki = i1;
+        checkj = j1;
+        while (checki>0) {
+            checki -= 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
+
+            validSquares.add(squareToAdd);
+
+        }
+
+        // down
+        checki = i1;
+        checkj = j1;
+        while (checki<7) {
+            checki += 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
+
+            validSquares.add(squareToAdd);
+
+        }
+
+        // left
+        checki = i1;
+        checkj = j1;
+        while (checkj>0) {
+            checkj -= 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+        
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
+
+            validSquares.add(squareToAdd);
+
+        }
+
+        // right
+        checki = i1;
+        checkj = j1;
+        while (checkj<7) {
+            checkj += 1;
+            if(b[checki][checkj].hasPiece()){
+                if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
+                    break;
+                }
+            }
+            ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+            squareToAdd.add(checki);
+            squareToAdd.add(checkj);
+
+            validSquares.add(squareToAdd);
+
+        }
+  
+          
+        ArrayList<Integer> newCoordinate = new ArrayList<Integer>();
+        newCoordinate.add(i2);
+        newCoordinate.add(j2);
+        for(int i = 0; i < validSquares.size(); i++){
+            boolean equal = newCoordinate.equals(validSquares.get(i));
+            if(equal) {
+                return true;
+            }    
         }
         return false;
     }

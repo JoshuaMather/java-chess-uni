@@ -29,6 +29,14 @@ public class Bishop extends Piece{
                 if(b[checki][checkj].getPiece().colour == this.colour){
                     break;
                 }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+        
+                    validSquares.add(squareToAdd);
+                    break;
+                }
             }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
@@ -45,6 +53,14 @@ public class Bishop extends Piece{
             checkj -= 1;
             if(b[checki][checkj].hasPiece()){
                 if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
                     break;
                 }
             }
@@ -65,6 +81,14 @@ public class Bishop extends Piece{
                 if(b[checki][checkj].getPiece().colour == this.colour){
                     break;
                 }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
+                    break;
+                }
             }
             ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
             squareToAdd.add(checki);
@@ -81,6 +105,14 @@ public class Bishop extends Piece{
             checkj -= 1;
             if(b[checki][checkj].hasPiece()){
                 if(b[checki][checkj].getPiece().colour == this.colour){
+                    break;
+                }
+                else{
+                    ArrayList<Integer> squareToAdd = new ArrayList<Integer>();
+                    squareToAdd.add(checki);
+                    squareToAdd.add(checkj);
+
+                    validSquares.add(squareToAdd);
                     break;
                 }
             }
