@@ -6,11 +6,11 @@ black U+265B
  */
 
 public class Queen extends Piece{
-    Queen(PieceColour colourOfPiece){
+    public Queen(PieceColour colourOfPiece){
         this.colour = colourOfPiece;
     }
 
-    public boolean isLegitmove(int i1, int j1, int i2, int j2){
+    public boolean isLegitMove(int i1, int j1, int i2, int j2){
          /*
         create list of possible moves
         see if second coordinate is in list

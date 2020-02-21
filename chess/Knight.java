@@ -6,11 +6,11 @@ black U+265E
 */
 
 public class Knight extends Piece{
-    Knight(PieceColour colourOfPiece){
+    public Knight(PieceColour colourOfPiece){
         this.colour = colourOfPiece;
     }
 
-    public boolean isLegitmove(int i1, int j1, int i2, int j2){
+    public boolean isLegitMove(int i1, int j1, int i2, int j2){
         // create list of possible moves and see if new coordinate is in it
 
         ArrayList<ArrayList<Integer>> validSquares = new ArrayList<ArrayList<Integer>>();

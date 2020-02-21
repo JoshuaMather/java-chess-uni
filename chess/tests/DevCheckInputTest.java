@@ -1,9 +1,11 @@
-package chess;
+package chess.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import chess.*;
 
 public class DevCheckInputTest {
 	

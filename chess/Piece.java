@@ -25,7 +25,7 @@ public class Piece {
 
     }
 
-    public boolean isLegitmove(int i1, int j1, int i2, int j2){
+    public boolean isLegitMove(int i1, int j1, int i2, int j2){
         return true;
     }
 }

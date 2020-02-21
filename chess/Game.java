@@ -144,8 +144,7 @@ public class Game {
 				if(b.hasPiece(i1, j1)){
 					Piece pieceToMove = b.getPiece(i1, j1);
 					if((whiteMove && pieceToMove.colour == PieceColour.WHITE) || (!whiteMove && pieceToMove.colour == PieceColour.BLACK)){
-						if(pieceToMove.isLegitmove(i1, j1, i2, j2)){
-						whiteMove = !whiteMove;
+						if(pieceToMove.isLegitMove(i1, j1, i2, j2)){
 							if(b.movePiece(i1, j1, i2, j2, pieceToMove)){
 								gameEnd = !gameEnd;
 								if(whiteMove){
@@ -155,20 +154,25 @@ public class Game {
 									System.out.println("Black is the winner!");
 								}
 							}
+							whiteMove = !whiteMove;
+
 						}
 						else{
 							System.out.println("Invalid move");
+							System.out.println("");
 							continue;
 						}
 					}
 					else{
 						System.out.println("Invalid piece to move");
+						System.out.println("");
 						continue;
 					}
 
 				}
 				else{
 					System.out.println("No piece on this square\n");
+					System.out.println("");
 					continue;
 				}
 
@@ -176,6 +180,7 @@ public class Game {
 			}
 			else{
 				System.out.println("Invalid input\n");
+				System.out.println("");
 				continue;
 			}
 
