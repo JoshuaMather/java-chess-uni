@@ -1,6 +1,6 @@
 package chess;
 import java.io.Console;
-/*path 
+/*path
 /mnt/d/University/Year\ 1/Computer\ Science/GitRepos/comp16412-coursework-1_p54507jm
 
 git
@@ -26,6 +26,7 @@ public class Game {
 
 			}
 
+			// gets user input
 			Console keyboardConsole = System.console();
 
 			String inputO = keyboardConsole.readLine("Enter Origin: ");
@@ -33,6 +34,7 @@ public class Game {
 				gameEnd = true;
 			}
 
+			// converts user input to form that matches index of the board
 			boolean validOrigin = false;
 			Character i1C = '\u0000';
 			Character j1C = '\u0000';
@@ -138,13 +140,17 @@ public class Game {
 
 				validDestination = true;
 			}
-			
 
+			// checks if origin and destination are in the board
 			if(validOrigin && validDestination){
+				// checks if there is a piece on the origin
 				if(b.hasPiece(i1, j1)){
 					Piece pieceToMove = b.getPiece(i1, j1);
+					// checks if the piece matches with the correct players turn
 					if((whiteMove && pieceToMove.colour == PieceColour.WHITE) || (!whiteMove && pieceToMove.colour == PieceColour.BLACK)){
+						// checks to see if the move specified is valid
 						if(pieceToMove.isLegitMove(i1, j1, i2, j2)){
+							// moves the piece and returns true if king is taken, winning game 
 							if(b.movePiece(i1, j1, i2, j2, pieceToMove)){
 								gameEnd = !gameEnd;
 								if(whiteMove){
@@ -186,10 +192,10 @@ public class Game {
 
 			b.printBoard();
 			System.out.println("");
-		}		
+		}
 	}
-	
-	
+
+
 	public static void main (String args[]){
 		Game g  = new Game();
 	}
