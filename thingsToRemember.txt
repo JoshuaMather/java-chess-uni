@@ -1,12 +1,5 @@
-pieces could be blocking a move
 
-piece move logic
-game logic
 
-* to end game see if piece taken is king
 
-not take own colour piece
-jumping over other pieces
-
-* pawn takes diagonally
-* pawn logic
+tests
+make sure work on lab computer
